@@ -1,0 +1,178 @@
+@import "./variables.scss";
+
+%card-style {
+  z-index: 2;
+  position: relative;
+  background-color: $background-and-footer-link;
+}
+
+.help-cutomers {
+  @media (min-width: 767px) {
+    flex-direction: row;
+    flex-flow: row-reverse;
+  }
+  .up {
+    display: none;
+    @media (min-width: 767px) {
+      display: block;
+      margin-left: auto;
+    }
+  }
+  .down {
+    display: none;
+    @media (min-width: 767px) {
+      display: block;
+    }
+  }
+  .columns-container {
+    padding-left: $page-side-padding;
+    padding-right: $page-side-padding;
+    @media (min-width: 570px) {
+      display: flex;
+      padding-top: 50px;
+      gap: 20px;
+    }
+    @media (min-width: 1200px) {
+      gap: 50px;
+    }
+    .column {
+      margin-left: auto;
+      @media (min-width: 570px) {
+        width: 50%;
+      }
+      h2 {
+        color: $text;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 500;
+        margin-top: 50px;
+        @media (min-width: 570px) {
+          margin-top: 0;
+          text-align: left;
+        }
+        @media (min-width: 1024px) {
+          width: 355px;
+          font-size: 26px;
+        }
+        @media (min-width: 1200px) {
+          width: 395px;
+          font-size: 36px;
+        }
+      }
+      .dots-1 {
+        display: none;
+        @media (min-width: 1200px) {
+          margin-top: 80%;
+          display: block;
+        }
+      }
+      .dots-2 {
+        display: none;
+        @media (min-width: 1200px) {
+          margin-left: 450px;
+          margin-top: -70px;
+          display: block;
+        }
+      }
+      .dots-3 {
+        display: none;
+        @media (min-width: 1200px) {
+          margin-top: 40em;
+          margin-left: 490px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .card {
+    box-shadow: 5px 20px 50px rgba(74, 153, 211, 0.2);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    @media (min-width: 1024px) {
+      padding: 25px;
+    }
+    color: $text-color;
+    @media (min-width: 570px) {
+      width: 200px;
+    }
+    @media (min-width: 767px) {
+      width: 250px;
+    }
+    @media (min-width: 880px) {
+      width: 300px;
+    }
+    @media (min-width: 992px) {
+      width: 320px;
+    }
+    @media (min-width: 1200px) {
+      width: 380px;
+      padding: 48px;
+    }
+    .card-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+      @media (min-width: 880px) {
+        width: 100%;
+      }
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 30px;
+      @media (min-width: 880px) {
+        font-size: 20px;
+      }
+    }
+    p {
+      text-align: justify;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 26px;
+      opacity: 0.6;
+      @media (min-width: 767px) {
+        font-size: 16px;
+      }
+    }
+    .learn-more {
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      color: $link;
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 20px;
+      @media (min-width: 1200px) {
+        margin-bottom: 48px;
+        margin-top: 52px;
+      }
+      img {
+        margin-left: 4px;
+      }
+    }
+  }
+  .card-1 {
+    @extend %card-style;
+    @media (min-width: 1200px) {
+      margin-top: -30em;
+      margin-left: 6em;
+    }
+  }
+  .card-2 {
+    @extend %card-style;
+    @media (min-width: 1200px) {
+      margin-top: -5em;
+      margin-left: 5em;
+    }
+  }
+  .card-3 {
+    @extend %card-style;
+    @media (min-width: 1200px) {
+      margin-top: -45em;
+      margin-left: 5em;
+    }
+  }
+}

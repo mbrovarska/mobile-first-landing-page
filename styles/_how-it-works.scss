@@ -1,0 +1,66 @@
+@import "./variables.scss";
+
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $background;
+  padding-top: 40px;
+  padding-left: $page-side-padding;
+  padding-right: $page-side-padding;
+  .title {
+    color: $link;
+    font-size: 20px;
+    @media (min-width: 570px) {
+      font-weight: 700;
+      font-size: 26px;
+    }
+  }
+}
+
+.section-container {
+  @media (min-width: 720px) {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+  }
+  @media (min-width: 880px) {
+    padding-bottom: 92px;
+  }
+  @media (min-width: 1200px) {
+    gap: 11em;
+  }
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    @media (min-width: 1200px) {
+      width: 257px;
+    }
+    h3 {
+      padding-bottom: 0;
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 18px;
+      color: $text-color;
+      text-align: center;
+    }
+    .last-h3 {
+      margin-top: 29px;
+    }
+    p {
+      display: block;
+      padding-top: 0;
+      margin-top: 0;
+      text-align: center;
+      align-self: baseline;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}

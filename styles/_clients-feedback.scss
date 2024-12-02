@@ -1,0 +1,182 @@
+@import "./variables.scss";
+
+.clients-feedback {
+  padding-top: 30px;
+  padding-left: $page-side-padding;
+  padding-right: $page-side-padding;
+  @media (min-width: 1200px) {
+    padding-left: 0;
+    padding-top: 150px;
+  }
+  .title {
+    text-align: center;
+    color: $text-color;
+    font-size: 20px;
+    @media (min-width: 570px) {
+      font-size: 26px;
+    }
+    @media (min-width: 1200px) {
+      margin-bottom: 180px;
+    }
+  }
+  .what-clients-say {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: space-around;
+      padding-top: 25px;
+      gap: 10em;
+    }
+    .blue {
+      display: none;
+      @media (min-width: 1200px) {
+        display: block;
+        width: 1000px;
+        height: 400px;
+        background: $background;
+        border-radius: 6px;
+      }
+    }
+    .user-image {
+      display: none;
+      @media (min-width: 1200px) {
+        display: block;
+        position: relative;
+        z-index: 2;
+        margin-left: -650px;
+        margin-top: -250px;
+        width: 599px;
+        padding-top: 40px;
+      }
+    }
+  }
+}
+
+.slider-container {
+  .icon {
+    margin-top: 15px;
+    width: 8%;
+    @media (min-width: 640px) {
+      width: 7%;
+    }
+    @media (min-width: 880px) {
+      width: auto;
+    }
+  }
+  .prevNext {
+    width: 100%;
+    .btn-container {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      .next,
+      .prev {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+      }
+      .prev {
+        background-color: $link;
+        color: $background-and-footer-link;
+      }
+      .next {
+        background: $background-and-footer-link;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+        margin-right: 15px;
+        color: $link;
+      }
+    }
+  }
+
+  .text-container {
+    width: 100%;
+    transition: 0.8s;
+  }
+
+  .text {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    font-size: 16px;
+    font-weight: 400;
+    .feedback {
+      text-align: justify;
+      color: $text-color;
+      opacity: 0.5;
+      line-height: 24px;
+    }
+    .user {
+      color: $text-color;
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+
+  s:target ~ .prevNext > .btn-container:nth-child(1) {
+    display: flex;
+  }
+
+  #s1:target ~ .prevNext > .btn-container:nth-child(1) {
+    display: flex;
+  }
+  #s1:target ~ .prevNext > .btn-container:nth-child(2),
+  .btn-container:nth-child(3) {
+    display: none;
+  }
+  #s2:target ~ .prevNext > .btn-container:nth-child(2) {
+    display: flex;
+  }
+
+  #s2:target ~ .prevNext > .btn-container:nth-child(1),
+  .btn-container:nth-child(3) {
+    display: none;
+  }
+
+  #s3:target ~ .prevNext > .btn-container:nth-child(3) {
+    display: flex;
+  }
+
+  #s3:target ~ .prevNext > .btn-container:nth-child(1),
+  .btn-container:nth-child(2) {
+    display: none;
+  }
+
+  /* show and hide slide text */
+  s:target ~ .text-container > .text:nth-child(2),
+  .text:nth-child(3) {
+    display: none;
+  }
+
+  #s1:target ~ .text-container > .text:nth-child(1) {
+    display: flex;
+  }
+
+  #s1:target ~ .text-container > .text:nth-child(2),
+  .text:nth-child(3) {
+    display: none;
+  }
+
+  #s2:target ~ .text-container > .text:nth-child(2) {
+    display: flex;
+  }
+
+  #s2:target ~ .text-container > .text:nth-child(1),
+  .text:nth-child(3) {
+    display: none;
+  }
+
+  #s3:target ~ .text-container > .text:nth-child(3) {
+    display: flex;
+  }
+
+  #s3:target ~ .text-container > .text:nth-child(1),
+  .text:nth-child(2) {
+    display: none;
+  }
+}

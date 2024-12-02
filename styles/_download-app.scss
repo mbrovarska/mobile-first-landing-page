@@ -1,0 +1,71 @@
+@import "./variables.scss";
+
+.download-app {
+  padding-left: $page-side-padding;
+  padding-right: $page-side-padding;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 767px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (min-width: 1200px) {
+    gap: 6em;
+  }
+  .img {
+    display: none;
+    @media (min-width: 480px) {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+    @media (min-width: 767px) {
+      margin-left: 0;
+    }
+  }
+  .text-btns-container {
+    display: flex;
+    flex-direction: column;
+    .title {
+      color: $text-color;
+      font-weight: 700;
+      font-size: 20px;
+      text-align: center;
+      @media (min-width: 570px) {
+        font-size: 25px;
+      }
+    }
+
+    .text {
+      text-align: center;
+      color: $text-color;
+      opacity: 0.5;
+      line-height: 24px;
+      text-align: justify;
+    }
+  }
+}
+
+.app-btns-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+  gap: 5px;
+  .google-btn {
+    width: 120px;
+    @media (min-width: 570px) {
+      width: 205px;
+    }
+  }
+  .apple-btn {
+    width: 100px;
+    margin-top: 6px;
+    @media (min-width: 570px) {
+      width: 165px;
+      margin-top: 12px;
+    }
+  }
+}
